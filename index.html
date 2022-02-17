@@ -8,55 +8,73 @@
     <title>Cash Guru</title>
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css">
-    <!-- Tailwind CDN Link -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Bootstrap CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>Cash Guru</h1>
+    <h1 class="py-5 text-info">Cash Guru</h1>
     <!-- Image Section -->
-    <div>
-        <img width="100%" height="100%" src="#" alt="">
-    </div>
-    <!-- Form Section -->
-    <div class="form">
-        <!-- Income Field -->
-        <h2>Income</h2>
-        <form action="">
-            <label for="income-input">Income</label>
-            <input type="text" name="" id="income-input" placeholder="monthly income">
-        </form>
-        <!-- Expenses Field -->
-        <h2>Expenses</h2>
-        <form action="">
-            <!-- Food Field -->
-            <label for="food-input">Food: </label>
-            <input type="text" name="" id="food-input" placeholder="food expenses">
-            <br>
-            <br>
-            <!-- Rent Field -->
-            <label for="rent-input">Rent: </label>
-            <input type="text" name="" id="rent-input" placeholder="rent expenses">
-            <br>
-            <br>
-            <!-- Clothes Field -->
-            <label for="clothes-input">Clothes: </label>
-            <input type="text" name="" id="clothes-input" placeholder="clothes expenses">
-        </form>
-        <br>
-        <!-- Button -->
-        <button class="handaler" type="submit" id="calculator-button">Calculate</button>
-        <!-- Total Expenses -->
-        <h2>Total Expenses: $<span id="total-expenses">000</span></h2>
-        <h2>Balance: $<span id="total-balance">000</span></h2>
-        <div>
-            <label for="">Save</label>
-            <input type="text" name="" id="save-input">
-            %
-            <button id="save-handler">Save</button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12 .col-md-6 col-lg-6 col-xl-6">
+                <img width="100%" height="100%" src="money.jpg" alt="">
+            </div>
+            <!-- Form Section -->
+            <div class="form col-12 col-sm-12 .col-md-6 col-lg-6 col-xl-6">
+                <!-- Income Field -->
+                <h5>Income</h5>
+                <br>
+                <form action="">
+                    <label for="income-input">Income</label>
+                    <input type="text" name="" id="income-input" placeholder="monthly income">
+                </form>
+                <br>
+                <!-- Expenses Field -->
+                <h5>Expenses</h5>
+                <br>
+                <form action="">
+                    <!-- Food Field -->
+                    <label for="food-input">Food: </label>
+                    <input type="text" name="" id="food-input" placeholder="food expenses">
+                    <br>
+                    <br>
+                    <!-- Rent Field -->
+                    <label for="rent-input">Rent: </label>
+                    <input type="text" name="" id="rent-input" placeholder="rent expenses">
+                    <br>
+                    <br>
+                    <!-- Clothes Field -->
+                    <label for="clothes-input">Clothes: </label>
+                    <input type="text" name="" id="clothes-input" placeholder="clothes expenses">
+                </form>
+                <br>
+                <!-- Button -->
+                <button class="handaler bg-info" type="submit" id="calculator-button">Calculate</button>
+                <br>
+                <br>
+                <!-- Total Expenses -->
+                <h5>Total Expenses: $<span id="total-expenses">000</span></h5>
+                <br>
+                <h5>Balance: $<span id="total-balance">000</span></h5>
+                <br>
+                <div>
+                    <label for="">Save:</label>
+                    <input type="text" name="" id="save-input">
+                    %
+                    <button id="save-handler">Save</button>
+                </div>
+                <br>
+                <h5>Saving Amount: $<span id="saving-amount">000</span></h5>
+                <br>
+                <h5>Remaining Balance: $<span id="remaining-balance">000</span></h5>
+            </div>
         </div>
-        <h2>Saving Amount: $<span id="saving-amount">000</span></h2>
-        <h2>Remaining Balance: $<span id="remaining-balance">000</span></h2>
     </div>
     <!-- JavaScript Link -->
     <script src="script.js"></script>
