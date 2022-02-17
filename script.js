@@ -1,19 +1,20 @@
+// === Declare Function for Input Value === //
 function getInputValue(id) {
     const inputField = document.getElementById(id);
     const inputValue = parseFloat(inputField.value);
-    // inputField.value = '';
+    // inputField.value = ''; // It has been commenting for testing purpose //
     return inputValue;
 
 }
 
 
-// Calculate Button Evenet Handler Add
+// === Calculation of Button Evenet Handler to get Add === //
 document.getElementById('calculator-button').addEventListener('click', function () {
-    // Get income field value and parse to float
+    // === Get income field value and parse-to-float === //
     const income = getInputValue('income-input');
 
 
-    // Get Food, rent, cloths field value & parse to float
+    // === Get Food, rent and clothes field value & parse-to-float === //
     const foodCost = getInputValue('food-input');
     const rentCost = getInputValue('rent-input');;
     const clothCost = getInputValue('clothes-input');
@@ -24,15 +25,15 @@ document.getElementById('calculator-button').addEventListener('click', function 
         const getTotalCost = document.getElementById('total-expenses');
         getTotalCost.innerText = totalCost;
 
-        // Set Balace
+        // Set Balance //
         const getCurrentBalance = document.getElementById('total-balance');
         getCurrentBalance.innerText = income - totalCost;
     }
     else if (totalCost > income) {
-        alert('Sorry! Income can\'t\ be less than expenses.');
+        alert('Oops! you are wasteful. Try to be frugal.');
     }
     else {
-        alert('Sorry! Please Input a positive number');
+        alert('Hey, naughty! Think positive. Put in a positive number.');
     }
 
 
@@ -56,11 +57,11 @@ document.getElementById('save-handler').addEventListener('click', function () {
         document.getElementById('remaining-balance').innerText = remainingBalance;
     }
     else if (saving < 0) {
-        alert('Please Input a positive Number');
+        alert('Hey, naughty! Think positive. Put in a positive number.');
     }
 
     else {
-        alert('Sry! Your Savings can\'t\ be greater than your current balance');
+        alert("Sorry! Your Savings can't be greater than your Balance");
     }
 
 })
