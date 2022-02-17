@@ -1,32 +1,34 @@
 document.getElementById('calculator-button').addEventListener('click', function () {
-    // Calculae Food Expense
-    let foodInput = document.getElementById('food-input');
+    // Calculae Food Expense //
+    const foodInput = document.getElementById('food-input');
     const foodAmountText = foodInput.value;
     const foodAmount = parseFloat(foodAmountText);
-    const foodToatal = document.getElementById('total-expense');
-    const foodToatalText = foodToatal.innerText;
     foodInput.value = '';
-    const previousfoodToatal = parseFloat(foodToatalText);
-    foodToatal.innerText = previousfoodToatal + foodAmount;
-    // Calculae rent Expense
-    let rentInput = document.getElementById('rent-input');
+    // Calculae rent Expensef //
+    const rentInput = document.getElementById('rent-input');
     const rentAmountText = rentInput.value;
     const rentAmount = parseFloat(rentAmountText);
-    const rentToatal = document.getElementById('total-expense');
-    const rentToatalText = rentToatal.innerText;
     rentInput.value = '';
-    const previousrentToatal = parseFloat(rentToatalText);
-    foodToatal.innerText = previousrentToatal + rentAmount;
-    console.log(foodToatal);
-    // Calculae clothes Expense
-    let clothesInput = document.getElementById('clothes-input');
+    // Calculae clothes Expense //
+    const clothesInput = document.getElementById('clothes-input');
     const clothesAmountText = clothesInput.value;
     const clothesAmount = parseFloat(clothesAmountText);
-    const clothesToatal = document.getElementById('total-expense');
-    const clothesToatalText = clothesToatal.innerText;
     clothesInput.value = '';
-    const previousclothesToatal = parseFloat(clothesToatalText);
-    foodToatal.innerText = previousclothesToatal + clothesAmount;
-    console.log(foodToatal);
+    // Total Expense //
+    const totalExpense = document.getElementById('total-expenses');
+    const totalExpenseAmount = foodAmount + rentAmount + clothesAmount;
+    totalExpense.innerText = totalExpenseAmount;
+    // Total Income //
+    const incomeInput = document.getElementById('income-input');
+    const incomeAmountText = incomeInput.value;
+    const incomeAmount = parseFloat(incomeAmountText);
+    incomeInput.value = '';
+    // Total Balance //
+    const totalIncome = document.getElementById('total-balance');
+    const totalIncomeAmount = incomeAmount;
+    totalIncome.innerText = totalIncomeAmount - totalExpenseAmount;
+    const netBalance = totalIncome - totalExpense;
+
+    // Balance //
 
 });
