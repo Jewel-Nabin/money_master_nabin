@@ -32,3 +32,21 @@ document.getElementById('calculator-button').addEventListener('click', function 
     // Balance //
 
 });
+
+document.getElementById('save-handler').addEventListener('click', function () {
+   // Calculate Percentage //
+    const saveInput = document.getElementById('save-input');
+    const saveAmountText = saveInput.value;
+    const saveAmount = parseFloat(saveAmountText);
+    saveInput.value = '';
+
+    // Saving Balance //
+    const totalSave = document.getElementById('saving-amount');
+    const totalSaveAmount = saveAmount;
+    totalSave.innerText = totalIncomeAmount / 20;
+    // Remaining Balance //
+    const totalRemaining = document.getElementById('remaining-balance');
+    const totalRemainingAmount = saveAmount;
+    totalIncome.innerText = totalIncomeAmount - totalExpenseAmount;
+    const netBalance = netBalance - saveAmount;
+});
